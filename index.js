@@ -15,7 +15,17 @@ async function getImages() {
         const response = await fetch(url, { headers: { Authorization: `Client-ID ${API_KEY}` } });
         const data = await response.json();
         // console.log(data.errors[0]);
-        console.log(data);
+        // console.log(data);
+        // console.log(data.results)
+        data.results.map(function (result) {
+            const image = document.createElement("img");
+            image.src = result.urls.small;
+            const imageLink = document.createElement("a");
+            imageLink.href = result.links.html;
+            imageLink.target = "_blank"; // Open link in new tab
+            imageLink.appendChild(image);
+            searchDispArea.appendChild(imageLink);
+        });
     } catch (error) {
         console.log(error);
     }

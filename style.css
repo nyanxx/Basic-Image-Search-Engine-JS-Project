@@ -28,9 +28,9 @@ html {
 h3 {
     font-family: 'Merriweather Sans';
     font-weight: 700;
-    font-size: 2.369rem; 
+    font-size: 2.369rem;
     text-align: center;
-    margin: 30px ;
+    margin: 30px;
 }
 
 .search-box {
@@ -53,6 +53,7 @@ h3 {
     border-radius: 8px;
     padding-left: 10px;
 }
+
 ::placeholder {
     color: var(--accent);
 }
@@ -68,7 +69,11 @@ h3 {
 
 .disp-container {
     display: flex;
-    margin: 40px
+    margin: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-evenly;
 }
 
 #list-more {
