@@ -6,6 +6,7 @@
     --primary: #8e9cdf;
     --secondary: #192f98;
     --accent: #2f50f1;
+    --backgroundgrad: linear-gradient(128deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 86, 122, 1) 100%);
 }
 
 * {
@@ -17,8 +18,10 @@
 body {
     font-family: 'Merriweather Sans', sans-serif;
     font-weight: 400;
-    background-color: var(--background);
+    background: var(--backgroundgrad);
     color: var(--text);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 html {
@@ -31,6 +34,12 @@ h3 {
     font-size: 2.369rem;
     text-align: center;
     margin: 30px;
+
+}
+
+h3:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease-in-out;
 }
 
 .search-box {
@@ -42,6 +51,7 @@ h3 {
     width: 300px;
     flex-direction: row;
     gap: 10px;
+
 }
 
 #search-input {
@@ -52,6 +62,8 @@ h3 {
     outline: none;
     border-radius: 8px;
     padding-left: 10px;
+    font-weight: bold;
+
 }
 
 ::placeholder {
@@ -59,18 +71,27 @@ h3 {
 }
 
 #search-btn {
-    background: var(--secondary);
+    background: var(--accent);
     color: var(--primary);
     border: none;
     outline: none;
     border-radius: 8px;
     width: 70px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#search-btn:hover,
+#list-more:hover {
+    background: var(--secondary);
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.02);
 }
 
 .disp-container {
     display: grid;
     width: 80%;
-    margin: 100px auto 50px;
+    margin: 70px auto 50px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 40px;
 }
@@ -83,12 +104,20 @@ h3 {
 }
 
 #list-more {
-    background: var(--secondary);
+    background: var(--accent);
     color: var(--primary);
     border: none;
     outline: none;
     border-radius: 8px;
-    width: 90px;
-    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100px;
+    height: 32px;
     display: none;
+}
+
+.centerbtn {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 80px;
 }
