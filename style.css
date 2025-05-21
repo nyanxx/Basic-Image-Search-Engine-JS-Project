@@ -15,45 +15,22 @@
 }
 
 body {
-    font-family: 'Merriweather Sans';
+    font-family: 'Merriweather Sans', sans-serif;
     font-weight: 400;
     background-color: var(--background);
     color: var(--text);
 }
 
-h1,
-h2,
+html {
+    font-size: 100%;
+}
+
 h3 {
     font-family: 'Merriweather Sans';
     font-weight: 700;
-}
-
-html {
-    font-size: 100%;
-    /* 16px */
-}
-
-
-h1 {
-    font-size: 4.210rem;
-    /* 67.36px */
-}
-
-h2 {
-    font-size: 3.158rem;
-    /* 50.56px */
-}
-
-h3 {
-    font-size: 2.369rem;
-    /* 37.92px */
+    font-size: 2.369rem; 
     text-align: center;
-    margin: 30px auto;
-}
-
-small {
-    font-size: 0.750rem;
-    /* 12px */
+    margin: 30px ;
 }
 
 .search-box {
@@ -101,5 +78,6 @@ small {
     outline: none;
     border-radius: 8px;
     width: 90px;
-    height: 30px
+    height: 30px;
+    display: none;
 }
